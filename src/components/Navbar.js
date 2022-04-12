@@ -25,12 +25,12 @@ const Navbar = () => (
       </nav>
 
       <div className="flex items-center font-bold text-sm no-underline text-white pr-6">
-        <button className="" href="#">
+        <Link to="/login">
           Login
-        </button>
-        <button className="pl-6" href="#">
+        </Link>
+        <Link className="pl-6" to="/register">
           Register
-        </button>
+        </Link>
       </div>
     </div>
   </nav>
