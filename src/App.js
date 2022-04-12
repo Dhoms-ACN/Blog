@@ -1,13 +1,13 @@
 import "./App.css";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import Blog from "./pages/Blog";
+import AppRouter from "./routers/AppRouter";
 
 function App() {
   return (
     <>
       <Header />
-      <Blog />
+        <AppRouter />
       <Footer />
     </>
   );

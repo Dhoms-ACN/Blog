@@ -1,23 +1,25 @@
+import { Link } from "react-router-dom";
+
 const Navbar = () => (
   <nav className="w-full py-4 bg-blue-800 shadow">
     <div className="w-full container mx-auto flex flex-wrap items-center justify-between">
       <nav>
-        <ul className="flex items-center justify-between font-bold text-sm text-white uppercase no-underline">
+        <ul className="flex items-center justify-between font-bold text-sm text-white no-underline">
           <li>
-            <button
+            <Link
               className="hover:text-gray-200 hover:underline px-4"
-              href="#"
+              to="/"
             >
-              Shop
-            </button>
+              Home
+            </Link>
           </li>
           <li>
-            <button
+            <Link
               className="hover:text-gray-200 hover:underline px-4"
-              href="#"
+              to="/about"
             >
               About
-            </button>
+            </Link>
           </li>
         </ul>
       </nav>
