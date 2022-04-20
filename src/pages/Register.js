@@ -17,7 +17,7 @@ const Register = () => {
 
   const registerUser = (e) => {
     e.preventDefault()
-    // setFormErrors(validateForm(formData))
+    setFormErrors(validateForm(formData))
     if(Object.keys(formErrors).length === 0) {
       axios.post('/sign-in', formData)
         .then(response => console.log(response.data))
