@@ -17,9 +17,20 @@ const Register = () => {
 
   const registerUser = (e) => {
     e.preventDefault()
-    setFormErrors(validateForm(formData))
+    // setFormErrors(validateForm(formData))
     if(Object.keys(formErrors).length === 0) {
-      console.log('Submitting')
+      axios.post('/sign-in', formData)
+        .then(response => console.log(response.data))
+        .catch(e => {
+          //in case front end validation fail's run backend validation
+          const { errors } = e.response.data 
+          const keys = Object.keys(errors)
+          const validationErrors  = {}
+          keys.forEach(key => {
+              validationErrors[key] = errors[key].message
+          })
+          setFormErrors({...formErrors, ...validationErrors})
+        })
     }
   }
 
